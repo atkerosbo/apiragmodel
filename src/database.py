@@ -6,14 +6,12 @@ import os
 
 load_dotenv()
 
-# DBUSER = os.getenv("DBUSER")
-# DBPASSWORD = os.getenv("DBPASSWORD")
-# DBNAME = os.getenv("DBNAME")
-# DBUSER = "user"
-# DBPASSWORD = "Komsrv999"
-# DBNAME = "mydb"
+DBUSER = os.getenv("DBUSER")
+DBPASSWORD = os.getenv("DBPASSWORD")
+DBNAME = os.getenv("DBNAME")
 
-SQLALCHEMY_DATABASE_URL = f"postgresql://user:Komsrv999@db:5432/mydb"
+
+SQLALCHEMY_DATABASE_URL = f"postgresql://{DBUSER}:{DBPASSWORD}@db:5432/{DBNAME}"
 
 
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
