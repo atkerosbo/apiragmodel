@@ -1,3 +1,4 @@
+version: '2.2'
 services:
   app:
     build:
@@ -15,6 +16,8 @@ services:
       - db
     networks:
       - app-network
+    volumes:
+      - ./src:/app  # Mount the src folder to /app inside the container  
 
   db:
     image: postgres:13

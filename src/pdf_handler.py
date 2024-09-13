@@ -12,12 +12,13 @@ from sqlalchemy.orm import Session
 from database import get_db
 from dotenv import load_dotenv
 
-
+load_dotenv()
+E_MODELS = os.getenv("E_MODELS")
 
 UPLOAD_DIR = "uploads"
 router = APIRouter()
 
-embedding_model = SentenceTransformer(model_name_or_path="all-MiniLM-L6-v2", device="cpu")
+embedding_model = SentenceTransformer(model_name_or_path="all-mpnet-base-v2", device="cpu")
 
 class PDFProcessor:
     def __init__(self, pdf_path: str):

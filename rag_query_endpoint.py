@@ -24,7 +24,7 @@ ORG = os.getenv("ORG")
 PROJECT = os.getenv("PROJECT")
 os.environ["OPENAI_API_KEY"] = os.getenv("OPEN_AI_KEY")
 
-instructions_summarization = """You are an AI assistant that helps summarize and answer questions based on provided context. You will be given a user query and relevant context retrieved from a knowledge base. Your task is to provide a concise and informative answer to the query using the given context. If the context doesn't contain enough information to answer the query, say so. Always base your answer on the provided context. Output the answer in the following format: answer = <answer here>"""
+instructions_summarization = """You are an AI assistant that helps customers get answers to their queries. Based on provided context. You will be given a user query and relevant context retrieved from a knowledge base. This will either be product information, or Information about the e-commerce store.r task is to provide a concise and informative answer to the query using the given context. If the context doesn't contain enough information to answer the query, say so. Output the answer in the following format: answer = <answer here>"""
 
 chat_model = ChatOpenAI(model=MODEL, temperature=0.7, openai_api_key=KEY)
 

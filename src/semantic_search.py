@@ -6,8 +6,6 @@ import numpy as np
 import faiss
 from sentence_transformers import SentenceTransformer
 from schemas import SearchQuery
-import os
-from dotenv import load_dotenv
 
 
 
